@@ -11,7 +11,7 @@ def countdown_timer(hours, minutes, seconds):
         time.sleep(1)
         total_seconds -= 1
 
-    print("Time's up, Thnaks!")
+    print("Time's up, Thanks!")
 hours = int(input("Enter the time in hours: "))
 minutes = int(input("Enter the time in minutes: "))
 seconds = int(input("Enter the time in seconds: "))
