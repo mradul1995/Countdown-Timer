@@ -1,0 +1,18 @@
+import time
+
+def countdown_timer(hours, minutes, seconds):
+    total_seconds = hours * 3600 + minutes * 60 + seconds
+    
+    while total_seconds:
+        hrs, remainder = divmod(total_seconds, 3600)
+        mins, secs = divmod(remainder, 60)
+        timer = '{:02d}:{:02d}:{:02d}'.format(hrs, mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+
+    print("Time's up, Thnaks!")
+hours = int(input("Enter the time in hours: "))
+minutes = int(input("Enter the time in minutes: "))
+seconds = int(input("Enter the time in seconds: "))
+countdown_timer(hours, minutes, seconds)
